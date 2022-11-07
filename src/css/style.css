@@ -1,0 +1,143 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: hsl(217, 54%, 11%);
+  font-size: 1.6rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 15px;
+}
+
+.card {
+  max-width: 346px;
+  background: hsl(216, 50%, 16%);
+  padding: 23px;
+  border-radius: 15px;
+}
+
+.card .image-link {
+  position: relative;
+  display: flex;
+}
+
+.card .image-link .image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card .image-link::before {
+  content: '';
+  background: hsl(178, 100%, 50%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.card .image-link::after {
+  content: '';
+  background: url(../images/icon-view.svg) no-repeat center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card .image-link:hover::before {
+  opacity: 0.4;
+}
+
+.card .image-link:hover::after {
+  opacity: 1;
+}
+
+.card .title-link .title {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 20px 0 20px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card .title-link .title:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.card .about {
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  line-height: 25px;
+  font-size: 1.8rem;
+  margin-bottom: 23px;
+}
+
+.card .info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.card .info .price {
+  color: hsl(178, 100%, 50%);
+  font-weight: 700;
+  display: flex;
+}
+
+.card .info .price::before {
+  content: '';
+  background: url(../images/icon-ethereum.svg) no-repeat center;
+  width: 11px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.card .info .days {
+  color: hsl(215, 51%, 70%);
+  display: flex;
+}
+
+.card .info .days::before {
+  content: '';
+  background: url(../images/icon-clock.svg) no-repeat center;
+  width: 15px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.card .creator {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  padding-top: 15px;
+}
+
+.card .creator .creator-img {
+  max-width: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.card .creator p {
+  color: hsl(215, 51%, 70%);
+}
+
+.card .creator .creator-name {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.card .creator .creator-name:hover {
+  color: hsl(178, 100%, 50%);
+}
